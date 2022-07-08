@@ -1,0 +1,71 @@
+ 
+  
+本科生课程论文
+
+
+题    目 ：Why do we need a time-series database                                                                                        
+课 程 名 ：The Design and Application of Time-series     database                                                                    
+任课教师 :  Jianhui Tao                                                          
+学    院 :    软件学院                                                                          
+专    业 :    软件工程                                                                                
+学生姓名 :    黄拓森                                                               
+学    号 :    2020141461168                      年级大二                                                   
+	
+
+Why do we need a time-series database
+学号:2020141461168
+作者：黄拓森
+abstract：
+A time-series database is essentially a database that is purposely built to store time-series data. Time series data that is typically coming from some type of sensor. And sensors are something like humidity or temperature or some kind of flow or something like that power meter.
+Anything is producing data continuously over all the industries. Data will have a value and we also want to store it with an appropriate timestamp. so a value in a timestamp that pairs together makes a data set.
+
+keywords：
+Time-series database, timestamp, collecting data, tremendous database
+
+
+Main body(TEXT): 
+一.Simply introduction to the time series database:
+A time-series database is essentially a database that is purposely built to store time-series data. Time series data that is typically coming from some type of sensor. And sensors are something like humidity or temperature or some kind of flow or something like that power meter.
+Anything is producing data continuously over all the industries. Data will have a value and we also want to store it with an appropriate timestamp. so a value in a timestamp that pairs together makes a data set.
+	Time series data is proficient and optimized to store that data and then allow that data and then to allow quick retrieval of that data. The time-series database is highly optimized and they are designed to work at scale. So if we have a lot of data that we are collecting, let’s say there are thousands or hundreds of thousands or even millions of sensors. For instance, a utility you might have for residential meter reading, where they’re reading remotely, or all the power that a home consumes, or the gas at a home consumes over any given month. That could be maybe a 24-hour reading. every 24 hours reading is taken and then that data is stored somewhere that would be a time series database where that data is stored.
+So we can imagine how big these systems can become. So not only do we have a lot of data point streams of sensor data coming in, but also there’s can be a long history of data. So we’ve seen databases that go back to that have data in them for over a hundred years. That data was not all collected automatically and stored in a time-series database. In the beginning, a lot of that stuff was just manually recorded and somebody went and entered that data into a database. But you can imagine if you have millions of sensors and you’re storing that data over any kind of significant amount of time. Maybe a year or two years or three decades. You can imagine the database become quite large so we must manage the tremendous database in another way like a time-series database.
+
+2. what functions should the database have?
+①essentially sensors are going to speak some kind of language or protocols. And that is a standard that the sensor can send data out to some kind of an endpoint. In this case, So the time series database has to be able to speak the language of the sensor so the time-series database has to be able to speak multiple protocols if you’re going to have a lot of different types of sensors coming in.
+
+②The second thing that a time-series database has to be able to do is that it has to be able to store the data somewhere and this is typically at some point going to be on a hard drive or some kind of electronic form format, SSDS or drives or something like that and that data is going to be retained for a certain amount of time to make it available for people to view and for systems to use that data. So the data storage and how that data gets arranged inside of that whatever the media is stored on is typically kind of like when people think of a database that’s where you get into the engine of the database how it stores that data how it’s able to index in and quickly retrieve it and bring in large amounts of data. So all those things are kind of in the inner core engine of the database storage and how it’s optimized for data retrieval and things like that are another component of a time series database.
+
+③Moreover, the database has to be able to provide is that “data egress” and “data output”. So a system is going to make searches and queries on that data for some analysts to do some kind of analytics on it. Data is going to be pulled out.
+
+So these three components: ingress, storage, and egress are all needed for the system to work as a whole and each part has its challenges and difficulties to overcome.
+
+	The other thing that makes time-series databases a little bit different than typical databases is that they have some pretty common features. One is that the data that is getting stored will use some type of a compression routine because there’s so much data coming in. It’s not practical to store every number and every value and every time stamp without compressing it in some shape or form. So typically there’s some kind of a data compression routine that happens to optimize the storage of that data. The other thing is the number of protocols that are supported time series data database. The databases will need to be able to talk to a lot of different sensors being able to support a wide range of standards and standard protocols are important and there are various ways that a time-series database can be set up to be able to handle those types of things.
+
+3. why a time-series database is necessary？
+① More accurate and meaningful time-series measurement
+A time-series database makes it easy to measure how datasets change over time. You can concurrently view past, present, and future datasets for reporting that is more accurate and meaningful.
+
+2. Resource-efficient data storage
+By the very nature of the data type, processing it can require massive amounts of storage, which can be difficult to manage. It was also very expensive. Time series databases have the tooling to aggregate data into predetermined periods and eliminate any data streams as needed. There are also compression algorithms that optimize data storage.
+
+3. Lightning-fast data queries
+A TSDB can also make it easy to query and retrieve data based on specific periods. Imagine that you can't remember the title of a book you recently read, but you know it was three months ago. Time series databases can help you figure out what the book was without having to use a bunch of wildcard searches.
+Using a time-series database, you can quickly find information based on timeframe.
+
+
+4. Common time-series database use cases
+1. Store and access IoT data
+Most IoT deployments — like connected water, energy, and temperature meters — involve constant data collection and reporting at regular intervals. Time series analysis can provide time-stamped data points for identifying patterns, average usage, and inefficiencies.
+For example, a connected pH meter connected to a TSDB might tell a technician tasked with maintaining a specific pH level that a certain vat of water is becoming too acidic. IoT endpoints also collect massive amounts of data, requiring highly scalable time-series databases.
+2. Monitor web services, applications, and infrastructure
+TSDBs can measure the performance of a company's applications and services. For example, the open-source monitoring system Prometheus is a time series database that enables developers to keep tabs on performance trends over time. This enables them to easily detect when problems are occurring, which then allows them to plan maintenance and rapidly respond to incidents to sustain an optimal user experience.
+Some web and mobile applications store the events within their app in a TSDB (such as a button click, playing a video, or sharing some content). With this data, they can map a user’s journey, identify frustrations or performance bottlenecks and enhance the user experience.
+3. Understand financial trends
+Using time-series data to accurately predict financial trends is very difficult. However, a TSDB can provide a wealth of contextual data to help analysts. Let’s take the stock market as an example; a sudden increase in airline stock may coincide with holiday travel. Or an executive leadership purge may spook investors, causing a stock to temporarily tumble. Time series databases make it easy to cross-reference data, providing a richer, clearer picture.
+
+4. Process self-driving vehicle data
+Self-driving cars typically collect about 4,000 GB of data per day. This is beyond the scope of what a typical relational database can process. Time series databases ingest data and queries faster, and compress data more strongly.
+As a result, they are ideal for processing massive volumes of real-time data that can be used to improve the safety of self-driving vehicles.
+5. Sales forecasting
+Retail stores must continuously predict future sales based on past ones so that they can restock appropriately. Thanks to time series databases, retailers can use statistical models combined with historical data. Cross-referenced with consumer behavior trends, they can predict future patterns and make informed decisions about which products to keep in stock and when.
+For instance, retailers are now using forecasting to plan and restock bicycles, which are now experiencing a shortage due to the pandemic. Retailers are using data to predict when new products will become available again, what the demand will be like, and what alternative transportation options consumers are buying instead of bicycles e.g., trikes, rollerblades, etc.
